@@ -1,0 +1,27 @@
+{
+    "name": "default",
+    "type": "postgres",
+    "host": "ec2-54-74-156-137.eu-west-1.compute.amazonaws.com",
+    "port": 5432,
+    "username": "deubouvkoiigdl",
+    "password": "624c141be6fa21940ef30e27a861c7d960bf2aadf584090b372e8f29cc9976cd",
+    "database": "defbo4hovl6v7h",
+    "entities": [
+        "dist/**/*.entity{.ts,.js}"
+    ],
+    "synchronize": true,
+    "migrations": [
+        "dist/migrations/*{.ts,.js}"
+    ],
+    "migrationsTableName": "migrations_typeorm",
+    "migrationsRun": true,
+    "cli": {
+        "migrationsDir": "src/migrations"
+    },
+    "extra": {
+        "ssl": {
+            "rejectUnauthorized": false
+        }
+    },
+    "ssl": true
+}
