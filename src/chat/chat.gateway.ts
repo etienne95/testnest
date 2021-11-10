@@ -5,7 +5,7 @@ import {
 } from '@nestjs/websockets'
 import { Socket } from 'socket.io'
 import { Logger } from '@nestjs/common'
-import _ from 'lodash'
+import { omit } from 'lodash'
 
 type OrderTable = {
   total: number
@@ -236,7 +236,7 @@ export class ChatGateway {
     // clean empty users
     const data = {
       ...this.tableClients.get(room.id),
-      users: _.omit(
+      users: omit(
         this.cleanEmptyUsers(this.tableClients.get(room.id).users),
         room.name
       ),
